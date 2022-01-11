@@ -46,7 +46,7 @@ export const ErrorContainer = styled.View`
 `;
 
 export const AnimationWrapper = styled.View`
-  width: 100%;
+  width: 65%;
   height: 40%;
   position: absolute;
   top: 30px;

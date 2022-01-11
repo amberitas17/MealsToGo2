@@ -11,12 +11,7 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { Search } from "../components/search.component";
-
-const RestaurantList = styled(FlatList).attrs({
-  contentContainerStyle: {
-    padding: 16,
-  },
-})``;
+import { RestaurantList } from "../components/restaurant-list.styles";
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
