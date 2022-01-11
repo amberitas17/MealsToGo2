@@ -49,6 +49,10 @@ export const AuthenticationContextProvider = ({ children }) => {
         setError(e.message);
       });
   };
+  const onLogout = () => {
+    setUser(null);
+    signOut(auth);
+  };
   return (
     <AuthenticationContext.Provider
       value={{
@@ -58,6 +62,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         error,
         onLogin,
         onRegister,
+        onLogout,
       }}
     >
       {children}
