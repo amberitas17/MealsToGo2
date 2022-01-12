@@ -4,6 +4,8 @@ import {
   CardStyleInterpolators,
 } from "@react-navigation/stack";
 import { SettingsScreen } from "../../features/settings/screens/settings.screen";
+import { CameraScreen } from "../../features/settings/screens/camera.screen";
+
 import { FavoritesScreen } from "../../features/settings/screens/favorites.screen";
 
 const SettingsStack = createStackNavigator();
