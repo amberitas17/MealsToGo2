@@ -1,9 +1,8 @@
 import camelize from "camelize";
+import { host } from "../../utils/env";
 
 export const restaurantsRequest = (location) => {
-  return fetch(
-    `http://5a8f-122-2-97-13.ngrok.io/mealstogo-d9b2e/us-central1/placesNearby?location=${location}`
-  ).then((res) => {
+  return fetch(`${host}/placesNearby?location=${location}`).then((res) => {
     return res.json();
   });
 };
