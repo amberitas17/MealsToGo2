@@ -15,10 +15,18 @@ import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { CartContext } from "../../../services/cart/cart.context";
 import { CreditCardInput } from "../components/credit-card.component";
+import { payRequest } from "../../../services/checkout/checkout.service";
 
 export const CheckoutScreen = () => {
   const { cart, restaurant, clearCart, sum } = useContext(CartContext);
   const [name, setName] = useState("");
+  const onPay = () => {
+    payRequest("123", 1299, "Mo Binni");
+  };
+
+  useEffect(() => {
+    onPay();
+  }, []);
   if (!cart.length || !restaurant) {
     return (
       <SafeArea>
