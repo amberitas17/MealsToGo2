@@ -21,7 +21,7 @@ export const SettingsScreen = ({ navigation }) => {
   return (
     <SafeArea>
       <AvatarContainer>
-      <Avatar.Icon
+        <Avatar.Icon
           size={180}
           icon="human"
           backgroundColor={colors.brand.primary}
