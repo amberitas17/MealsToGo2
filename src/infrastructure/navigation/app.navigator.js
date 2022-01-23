@@ -2,6 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { colors } from "../../infrastructure/theme/colors";
 
 import { RestaurantsNavigator } from "./restaurants.navigator";
 import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
@@ -33,8 +34,8 @@ export const AppNavigator = () => (
         <Tab.Navigator
           screenOptions={createScreenOptions}
           tabBarOptions={{
-            activeTintColor: "tomato",
-            inactiveTintColor: "gray",
+            activeTintColor: colors.brand.primary,
+              inactiveTintColor: colors.brand.muted,
           }}
         >
           <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
